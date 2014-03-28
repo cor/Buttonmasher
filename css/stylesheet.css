@@ -4,11 +4,6 @@ body {
 }
 
 
-
-
-
-
-
 .gameTitle {
 	color: #635b52;
 }
@@ -17,7 +12,17 @@ body {
 
 
 
-/* buttons */
+/*  
+/$$$$$$$              /$$     /$$                                  
+| $$__  $$            | $$    | $$                                  
+| $$  \ $$ /$$   /$$ /$$$$$$ /$$$$$$    /$$$$$$  /$$$$$$$   /$$$$$$$
+| $$$$$$$ | $$  | $$|_  $$_/|_  $$_/   /$$__  $$| $$__  $$ /$$_____/
+| $$__  $$| $$  | $$  | $$    | $$    | $$  \ $$| $$  \ $$|  $$$$$$ 
+| $$  \ $$| $$  | $$  | $$ /$$| $$ /$$| $$  | $$| $$  | $$ \____  $$
+| $$$$$$$/|  $$$$$$/  |  $$$$/|  $$$$/|  $$$$$$/| $$  | $$ /$$$$$$$/
+|_______/  \______/    \___/   \___/   \______/ |__/  |__/|_______/ 
+                                                                    
+                                                                    */
 .testButton {
 
 	background: #eaded2;
@@ -47,16 +52,43 @@ body {
 }
 
 
-.container {
-	text-align: center;
+
+.buttonContainer {
+
+	width: 400px;
+	height: 200px;
+
 
 	position: absolute;
 	top: 60px;
 	left: 50%;
 	margin-left: -200px;
 
+	text-align: center;
 	background-color: #c1b3a4;
-	width: 400px;
-	height: 200px;
 	border-radius: 10px;
 }
+
+.numberDisplay {
+	width: 400px;
+	height: 120px;
+
+
+	position: absolute;
+	top: 265px;
+	left: 50%;
+	margin-left: -200px;
+
+	padding: 60px 0 0 0;
+
+	text-align: center;
+	font-size: 70px;
+
+	background-color: #c1b3a4;
+	border-radius: 10px;
+
+
+}
+
+
+
