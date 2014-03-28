@@ -1,10 +1,10 @@
 
 var enteredCode = 0;
-var secretCodeHashed = "14f70566435cea4309176ad6a8aebb69ac8f99e9e211df66227522b5bb37c7a52e1f4de42543e4bb5346dbce23a636c7237a42e67ff4888befcc2167f7c2b451";
+var secretCodeHashed = "caae34a5e81031268bcdaf6f1d8c04d37b7f2c349afb705b575966f63e2ebf0fd910c3b05160ba087ab7af35d40b7c719c53cd8b947c96111f64105fd45cc1b2";
 var secretCodeLength = 3;
-var numberOfButtons = 4;
-var deler = Math.pow(secretCodeLength, numberOfButtons);
-
+var numberSystem;
+var deler;
+var numberDisplayCount = 0;
 
 function right(str,chr)
 {
@@ -12,8 +12,10 @@ function right(str,chr)
 }
 
 $(document).ready(function(){
+	numberSystem = $(".testButton").length + 1;
+	deler = Math.pow(secretCodeLength, numberSystem);
 
-	var numberDisplayCount = 0;
+	
 	$("div.numberDisplay").html(numberDisplayCount);
 	
 	$(".testButton").click(function(e){
@@ -21,16 +23,16 @@ $(document).ready(function(){
 		numberDisplayCount++;
 		$("div.numberDisplay").html(numberDisplayCount);
 		
-		
-		var buttonNumber = parseInt(e.target.id);
+		var buttonNumber = $(e.target).index(".testButton") + 1;
 		enteredCode = enteredCode % deler;
-		enteredCode *= numberOfButtons;
+		enteredCode *= numberSystem;
 		enteredCode += buttonNumber;
 
 		var enteredCodeHashed = hex_sha512("" + enteredCode);
 
+
 		if (secretCodeHashed == enteredCodeHashed) {
-			alert("YES!");
+			alert("Cracked the code! (or a bug)");
 		}
 	});
 });
