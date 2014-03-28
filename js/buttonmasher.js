@@ -2,10 +2,11 @@
 var enteredCode = 0;
 var secretCodeHashed = "caae34a5e81031268bcdaf6f1d8c04d37b7f2c349afb705b575966f63e2ebf0fd910c3b05160ba087ab7af35d40b7c719c53cd8b947c96111f64105fd45cc1b2";
 var secretCodeLength = 3;
-var numberSystem;
-var deler;
 var numberDisplayCount = 0;
 var numberOfStyles = 4;
+var numberOfButtons = 4;
+var numberSystem = numberOfButtons + 1
+var deler = numberOfButtons + 1;
 
 function right(str,chr)
 {
@@ -13,8 +14,9 @@ function right(str,chr)
 }
 
 $(document).ready(function(){
-	numberSystem = $(".testButton").length + 1;
-	deler = Math.pow(secretCodeLength, numberSystem);
+	for (var i = 1; i < numberOfButtons; i++) {
+		$(".testButton").first().clone().appendTo(".buttonContainer");
+	}
 
 	$("div.numberDisplay").html(numberDisplayCount);
 
