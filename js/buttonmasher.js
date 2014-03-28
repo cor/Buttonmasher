@@ -6,7 +6,7 @@ var numberDisplayCount = 0;
 var numberOfStyles = 4;
 var numberOfButtons = 4;
 var numberSystem = numberOfButtons + 1
-var deler = numberOfButtons + 1;
+var deler = Math.pow(numberOfButtons + 1, 10);
 
 function right(str,chr)
 {
