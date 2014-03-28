@@ -5,6 +5,7 @@ var secretCodeLength = 3;
 var numberSystem;
 var deler;
 var numberDisplayCount = 0;
+var numberOfStyles = 4;
 
 function right(str,chr)
 {
@@ -15,8 +16,11 @@ $(document).ready(function(){
 	numberSystem = $(".testButton").length + 1;
 	deler = Math.pow(secretCodeLength, numberSystem);
 
-	
 	$("div.numberDisplay").html(numberDisplayCount);
+
+	$(".testButton").each(function(index) {
+		$(this).addClass("testButton_" + ((index % numberOfStyles) + 1));
+	});
 	
 	$(".testButton").click(function(e){
 		
