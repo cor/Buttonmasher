@@ -6,7 +6,8 @@ var numberDisplayCount = 0;
 var numberOfStyles = 4;
 var numberOfButtons = 4;
 var numberSystem = numberOfButtons + 1
-var deler = Math.pow(numberOfButtons + 1, 10);
+var deler = Math.pow(numberSystem, secretCodeLength - 1);
+
 
 function right(str,chr)
 {
@@ -34,11 +35,11 @@ $(document).ready(function(){
 		enteredCode *= numberSystem;
 		enteredCode += buttonNumber;
 
-		var enteredCodeHashed = hex_sha512("" + enteredCode);
 
-
+		var enteredCodeHashed = hex_sha512("" + enteredCode); // convert entered code to a SHA-512 hash string 
 		if (secretCodeHashed == enteredCodeHashed) {
-			alert("Cracked the code! (or a bug)");
+			alert("You cracked the code!");
 		}
 	});
+	
 });
