@@ -39,6 +39,7 @@ $(document).ready(function(){
 		var enteredCodeHashed = hex_sha512("" + enteredCode); // convert entered code to a SHA-512 hash string 
 		if (secretCodeHashed == enteredCodeHashed) {
 			alert("You cracked the code!");
+			
 		}
 	});
 	

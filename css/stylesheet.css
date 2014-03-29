@@ -54,7 +54,7 @@ p {
 
 
 	position: absolute;
-	top: 60px;
+	top: 50px;
 	left: 50%;
 	margin-left: -200px;
 
@@ -65,15 +65,15 @@ p {
 
 .numberDisplay {
 
-	width: 400px;
-	height: 90px;
+	width: 200px;
+	height: 100px;
 
 	position: absolute;
-	top: 300px;
+	top: 50px;
 	left: 50%;
-	margin-left: -200px;
+	margin-left: 250px;
 
-	padding: 0 0 0 0;
+	padding: 50px 0 ;
 
 	text-align: center;
 	font-size: 70px;
@@ -83,6 +83,33 @@ p {
 	border-radius: 10px;
 
 }
+
+
+.secretImage {
+	
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	margin-left: -200px;
+
+	width: 400px;
+	height: 400px;
+
+	background-color: #c1b3a4;
+	border-radius: 10px;
+}
+
+.footer {
+
+}
+
+
+
+
+
+
+
+
 
 
 
