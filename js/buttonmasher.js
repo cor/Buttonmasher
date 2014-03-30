@@ -85,7 +85,7 @@ $(document).ready(function(){
 				else if (lastEnteredButton == 3) $(".enteredCodeDisplay_1").css("background-color", "rgb(235, 107, 64)");
 			 	else if (lastEnteredButton == 4) $(".enteredCodeDisplay_1").css("background-color", "rgb(226, 177, 49)");
 			 	else $(".enteredCodeDisplay_1").css("background-color", "pink");
-
+			 	$(".secretImage").html('<div class="codeCrackedMessage"><span class="wrongCode" ><h2>WRONG CODE!</h2><p>Please try again</p></span></div>');
 			 enteredCode = 0;
 		}
 

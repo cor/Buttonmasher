@@ -15,7 +15,9 @@ body {
 	color: #635b52;
 }
 
-
+.wrongCode {
+	color: red;
+}
 
 
 .testButton {
@@ -118,12 +120,12 @@ body {
 	background-color: #ad9d8f;
 	border-radius: 10px;
 
-	color: #504940;
 
 }
 .codeCrackedMessage > h2 {
 	text-align: center;
 	font-size: 30px;
+	color: green;
 }
 
 .codeCrackedMessage > p {
@@ -131,6 +133,15 @@ body {
 	margin-top: -10px;
 
 
+}
+
+.wrongCode {
+	color: #e3161a;
+	text-align: center;
+}
+
+.wrongCode > h2 {
+	 font-size: 30px;
 }
 
 .info {
