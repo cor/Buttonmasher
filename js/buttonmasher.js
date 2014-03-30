@@ -1,7 +1,7 @@
 
 var enteredCode = 0;
-var secretCodeHashed = "caae34a5e81031268bcdaf6f1d8c04d37b7f2c349afb705b575966f63e2ebf0fd910c3b05160ba087ab7af35d40b7c719c53cd8b947c96111f64105fd45cc1b2";
-var secretCodeLength = 3;
+var secretCodeHashed = "e1d0e982f89c3450af6733e1a47da2ff8401b78e8fb5fe14aa225f97ca8c9063cea655f194e440acdcdb145781616e7b4c81b9b7ebeaf9c96f647b034c5644d6";
+var secretCodeLength = 4;
 var numberDisplayCount = 0;
 var numberOfStyles = 4;
 var numberOfButtons = 4;
@@ -82,6 +82,8 @@ $(document).ready(function(){
 				else if (lastEnteredButton == 3) $(".enteredCodeDisplay_1").css("background-color", "rgb(235, 107, 64)");
 			 	else if (lastEnteredButton == 4) $(".enteredCodeDisplay_1").css("background-color", "rgb(226, 177, 49)");
 			 	else $(".enteredCodeDisplay_1").css("background-color", "pink");
+
+			 enteredCode = 0;
 		}
 
 
