@@ -6,41 +6,52 @@ var numberDisplayCount = 0;
 var numberOfStyles = 4;
 var numberOfButtons = 4;
 var numberSystem = numberOfButtons + 1
-var deler = Math.pow(numberSystem, secretCodeLength - 1);
+var divider = Math.pow(numberSystem, secretCodeLength - 1);
 
-
-function right(str,chr)
-{
-	return newstr=str.substr(str.length-chr,str.length)
-}
 
 $(document).ready(function(){
+
+	/**
+	 * clone the button a specific amount of times (numberOfButtons)
+	 */
 	for (var i = 1; i < numberOfButtons; i++) {
 		$(".testButton").first().clone().appendTo(".buttonContainer");
 	}
 
+	/**
+	 * Show how many buttons are pressed on the numberDisplay
+	 */
 	$("div.numberDisplay").html(numberDisplayCount);
 
+	/**
+	 * Add CSS styles to each button for use in the stylesheet
+	 */
 	$(".testButton").each(function(index) {
 		$(this).addClass("testButton_" + ((index % numberOfStyles) + 1));
 	});
 	
-	$(".testButton").click(function(e){
+
+
+	$(".testButton").click(function(event){	
 		
 		numberDisplayCount++;
 		$("div.numberDisplay").html(numberDisplayCount);
 		
-		var buttonNumber = $(e.target).index(".testButton") + 1;
-		enteredCode = enteredCode % deler;
+		//use jquery to check what button is pressed and convert it to 1-based
+		var buttonNumber = $(event.target).index(".testButton") + 1;
+		
+		//Use a mathematical algorithm to store the pressed button in enteredCode
+		enteredCode = enteredCode % divider;
 		enteredCode *= numberSystem;
 		enteredCode += buttonNumber;
 
+		// convert entered code to a SHA-512 hash string 
+		var enteredCodeHashed = hex_sha512("" + enteredCode);
 
-		var enteredCodeHashed = hex_sha512("" + enteredCode); // convert entered code to a SHA-512 hash string 
+		// If the code is correct, do stuff 
 		if (secretCodeHashed == enteredCodeHashed) {
 			alert("You cracked the code!");
-			
 		}
+
 	});
-	
 });

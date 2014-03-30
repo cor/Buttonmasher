@@ -95,9 +95,13 @@ p {
 	width: 400px;
 	height: 400px;
 
+	
 	background-color: #c1b3a4;
 	border-radius: 10px;
 }
+
+
+
 
 .info {
 
@@ -128,6 +132,65 @@ p {
 
 
 
+.codepad {
+	position: absolute;
+	top: 320px;
+	left: 50%;
+	margin-left: -305px;
+
+	width: 360px;
+	height: 86px;
+
+	
+	background-color: #ad9d8f;
+	border-radius: 10px;
+}
+
+
+.enteredCodeDisplay_1 {
+	background-color: #eb2e22;
+	height: 70px;
+	width: 70px;
+
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	border-radius: 5px;
+}
+
+.enteredCodeDisplay_2 {
+	background-color: #eb4b3d;
+	height: 70px;
+	width: 70px;
+
+	position: absolute;
+	top: 8px;
+	left: 100px;
+	border-radius: 5px;
+}
+
+.enteredCodeDisplay_3 {
+	background-color: #eb6b40;
+	height: 70px;
+	width: 70px;
+
+	position: absolute;
+	top: 8px;
+	left: 191px;
+	border-radius: 5px;
+}
+
+.enteredCodeDisplay_4 {
+	background-color: #e2b131;
+	height: 70px;
+	width: 70px;
+
+	position: absolute;
+	top: 8px;
+	left: 283px;
+	border-radius: 5px;
+}
+2
 
 
 
