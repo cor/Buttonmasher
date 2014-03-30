@@ -31,19 +31,27 @@ p {
 
 	padding: 5px;
 	margin: 0 10px 0 10px;
+	position: absolute;
+
+	top: 110px;
+
 }
 
 .testButton_1 {
 	border-color: #f1462d;
+	left: 10px;
 }
 .testButton_2 {
 	border-color: #f1644d;
+	left: 106px;
 }
 .testButton_3 {
 	border-color: #f18152;
+	left: 203px;
 }
 .testButton_4 {
 	border-color: #e8bd3f;
+	left: 300px;
 }
 
 
@@ -148,7 +156,7 @@ p {
 
 
 .enteredCodeDisplay_1 {
-	background-color: #eb2e22;
+	background-color: rgb(255, 255, 255);
 	height: 70px;
 	width: 70px;
 
@@ -159,7 +167,7 @@ p {
 }
 
 .enteredCodeDisplay_2 {
-	background-color: #eb4b3d;
+	background-color: rgb(255, 255, 255);
 	height: 70px;
 	width: 70px;
 
@@ -170,7 +178,7 @@ p {
 }
 
 .enteredCodeDisplay_3 {
-	background-color: #eb6b40;
+	background-color: rgb(255, 255, 255);
 	height: 70px;
 	width: 70px;
 
@@ -181,7 +189,7 @@ p {
 }
 
 .enteredCodeDisplay_4 {
-	background-color: #e2b131;
+	background-color: rgb(255, 255, 255);
 	height: 70px;
 	width: 70px;
 
@@ -190,7 +198,7 @@ p {
 	left: 283px;
 	border-radius: 5px;
 }
-2
+
 
 
 
