@@ -1,15 +1,17 @@
 
 var enteredCode = 0;
-var secretCodeHashed = "e1d0e982f89c3450af6733e1a47da2ff8401b78e8fb5fe14aa225f97ca8c9063cea655f194e440acdcdb145781616e7b4c81b9b7ebeaf9c96f647b034c5644d6";
+var secretCodeHashed = "7a6328ffce84ee490edfc0368ee00c6b9b48232941b27789088b134002c3c40bf3cfa3ad1a991ee142c8fb962510a97bd1f0b32b0251d189f6be02d0b0c0a181";
 var secretCodeLength = 4;
 var numberDisplayCount = 0;
 var numberOfStyles = 4;
 var numberOfButtons = 4;
 var numberSystem = numberOfButtons + 1
 var divider = Math.pow(numberSystem, secretCodeLength - 1);
+var codeCracked = false; 
 
 
 $(document).ready(function(){
+
 
 	/**
 	 * clone the button a specific amount of times (numberOfButtons)
@@ -32,7 +34,8 @@ $(document).ready(function(){
 	
 	$(".testButton").click(function(event){	
 		
-		numberDisplayCount++;
+		if (!codeCracked) {
+				numberDisplayCount++;
 		$("div.numberDisplay").html(numberDisplayCount);
 		
 		//use jquery to check what button is pressed and convert it to 1-based
@@ -97,8 +100,11 @@ $(document).ready(function(){
 
 		// If the code is correct, do stuff 
 		if (secretCodeHashed == enteredCodeHashed) {
-			alert("You cracked the code!");
+			codeCracked = true;
+			$(".secretImage").html('<div class="codeCrackedMessage"><h2>You cracked the code!</h2><p><i>Congratulations!</i></p></div>');
+
 		}
 
+		}
 	});
 });
