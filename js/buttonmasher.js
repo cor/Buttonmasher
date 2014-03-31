@@ -1,6 +1,6 @@
 
 var enteredCode = 0;
-var secretCodeHashed = "7a6328ffce84ee490edfc0368ee00c6b9b48232941b27789088b134002c3c40bf3cfa3ad1a991ee142c8fb962510a97bd1f0b32b0251d189f6be02d0b0c0a181";
+var secretCodeHashed = "1a78e5ac8e76a77ed8cb97d1789e53a679e8a8c33baa2192c38ad9e69781e3a8d514799916a21471bb441eae98228ecb86dde605dcb94f835e6243cfda66b5fc";
 var secretCodeLength = 4;
 var numberDisplayCount = 0;
 var numberOfStyles = 4;
