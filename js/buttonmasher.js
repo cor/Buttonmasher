@@ -1,22 +1,25 @@
+var NUMBER_OF_STYLES = 4;
+var NUMBER_OF_BUTTONS = 4;
 
-var enteredCode = 0;
-var secretCodeHashed = "1a78e5ac8e76a77ed8cb97d1789e53a679e8a8c33baa2192c38ad9e69781e3a8d514799916a21471bb441eae98228ecb86dde605dcb94f835e6243cfda66b5fc";
-var secretCodeLength = 4;
+var SECRET_CODE_HASHED = "1a78e5ac8e76a77ed8cb97d1789e53a679e8a8c33baa2192c38ad9e69781e3a8d514799916a21471bb441eae98228ecb86dde605dcb94f835e6243cfda66b5fc";
+var SECRET_CODE_LENGTH = 4;
+
+// used for hash
+var numberSystem = NUMBER_OF_BUTTONS + 1
+var divider = Math.pow(numberSystem, SECRET_CODE_LENGTH - 1);
+
 var numberDisplayCount = 0;
-var numberOfStyles = 4;
-var numberOfButtons = 4;
-var numberSystem = numberOfButtons + 1
-var divider = Math.pow(numberSystem, secretCodeLength - 1);
-var codeCracked = false; 
+var enteredCode = 0;
+var codeCracked = false;
 
 
 $(document).ready(function(){
 
 
 	/**
-	 * clone the button a specific amount of times (numberOfButtons)
+	 * clone the button a specific amount of times (NUMBER_OF_BUTTONS)
 	 */
-	for (var i = 1; i < numberOfButtons; i++) {
+	for (var i = 1; i < NUMBER_OF_BUTTONS; i++) {
 		$(".testButton").first().clone().appendTo(".buttonContainer");
 	}
 
@@ -29,7 +32,7 @@ $(document).ready(function(){
 	 * Add CSS styles to each button for use in the stylesheet
 	 */
 	$(".testButton").each(function(index) {
-		$(this).addClass("testButton_" + ((index % numberOfStyles) + 1));
+		$(this).addClass("testButton_" + ((index % NUMBER_OF_STYLES) + 1));
 	});
 	
 	$(".testButton").click(function(event){	
@@ -99,12 +102,11 @@ $(document).ready(function(){
 		var enteredCodeHashed = hex_sha512("" + enteredCode);
 
 		// If the code is correct, do stuff 
-		if (secretCodeHashed == enteredCodeHashed) {
+		if (SECRET_CODE_HASHED == enteredCodeHashed) {
 			codeCracked = true;
 			$(".secretImage").html('<div class="codeCrackedMessage"><h2>You cracked the code!</h2><p><i>Congratulations!</i></p></div>');
 
 		}
-
 		}
 	});
 });
