@@ -1,5 +1,5 @@
 body {
-	font-family: helvetica;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 	background-color: #f9f8eb
 
 }
@@ -166,9 +166,8 @@ body {
 	font-size: 26px;
 }
 
-.info > p {
-
-	margin-top: -20px;
+.info p {
+    margin-bottom: 10px;
 }
 
 .info img {
